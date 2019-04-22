@@ -107,8 +107,7 @@ defmodule Day_03_1Test do
       #2 @ 3,1: 4x4
       #3 @ 5,5: 2x2
       """
-      |> String.split("\n", trim: true)
-      |> Enum.map(&Day_03_1.parse_line/1)
+      |> Day_03_1.parse_lines()
 
     assert Day_03_1.map_frequencies(input) == %{
              "1" => %{"3" => 1, "4" => 1, "5" => 1, "6" => 1},
@@ -127,8 +126,7 @@ defmodule Day_03_1Test do
       #2 @ 3,1: 4x4
       #3 @ 5,5: 2x2
       """
-      |> String.split("\n", trim: true)
-      |> Enum.map(&Day_03_1.parse_line/1)
+      |> Day_03_1.parse_lines()
       |> Day_03_1.map_frequencies()
 
     assert Day_03_1.count_adjacent(input) == 4
